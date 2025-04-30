@@ -20,10 +20,10 @@ public class AirQualityService {
     // data.go.kr로 부터 미세먼지 정보를 가져옴
     public String getAirQualityDataBasic(String sidoName) throws IOException {
         //serviceKey = System.getenv("app.serviceKey");
-        serviceKey = "NBEkegfjlHO/tlfWWb8XkQvNwEeYZqYFFCyVIFJlHBA0xKYh6c72+5FYTTrbh0VnnZR286Lxzgcj12ocnBotCA==";
+        serviceKey = "NBEkegfjlHO%2FtlfWWb8XkQvNwEeYZqYFFCyVIFJlHBA0xKYh6c72%2B5FYTTrbh0VnnZR286Lxzgcj12ocnBotCA%3D%3D";
 
         // API 요청을 위해 URL 구성
-        StringBuilder urlBuilder = new StringBuilder("https://apis.data.go.kr/B552584/UlfptcaAlarmInqireSvc"); /*URL*/
+        StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"); /*URL*/
         urlBuilder.append("?").append(URLEncoder.encode("serviceKey","UTF-8")).append("=").append(serviceKey); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("json", "UTF-8")); /*xml 또는 json*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("100", "UTF-8")); /*한 페이지 결과 수*/
